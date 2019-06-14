@@ -1,0 +1,11 @@
+Package: bhpm
+Type: Package
+Title: Bayesian Hierarchical Possion Models for Mulitple Grouped Outcomes with Clustering
+Version: 1.03
+Date: 2019-06-10
+Author: Raymond Carragher <raymond.carragher@strath.ac.uk>
+Maintainer: Raymond Carragher <rcarragh@gmail.com>
+Depends: coda
+Encoding: UTF-8
+Description: Bayesian methods for the detection of differences in rates of outcomes for multiple treatments for clustered observaitons. This software was developed for the Risk Prediction in Pharmacoepidemology project as part of a Rutherford Fund Fellowship at Health Data Research (UK).
+License: GPL (>= 2)
