@@ -1,0 +1,60 @@
+Summary Convergence Diagnostics:
+================================
+theta:
+------
+Max Gelman-Rubin diagnostic (3 Cluster1 Group2 Outcome4): 1.018468
+Min Gelman-Rubin diagnostic (2 Cluster1, Group1 Outcome2): 1.000056
+gamma:
+------
+Max Gelman-Rubin diagnostic (Cluster1 Group2 Outcome3): 1.000747
+Min Gelman-Rubin diagnostic (Cluster1 Group3 Outcome6): 0.999993
+mu.gamma:
+---------
+Max Gelman-Rubin diagnostic (Cluster1 Group3): 1.000203
+Min Gelman-Rubin diagnostic (Cluster3 Group1): 0.999997
+mu.theta:
+---------
+Max Gelman-Rubin diagnostic (3 Cluster1 Group2): 1.012426
+Min Gelman-Rubin diagnostic (2 Cluster2 Group2): 1.000307
+sigma2.gamma:
+-------------
+Max Gelman-Rubin diagnostic (Cluster1 Group2): 1.001045
+Min Gelman-Rubin diagnostic (Cluster1 Group1): 1.000017
+sigma2.theta:
+-------------
+Max Gelman-Rubin diagnostic (4 Cluster1 Group2): 1.027033
+Min Gelman-Rubin diagnostic (2 Cluster1 Group2): 1.000039
+pi:
+---
+Max Gelman-Rubin diagnostic (3 Cluster1 Group2): 1.000931
+Min Gelman-Rubin diagnostic (3 Cluster3 Group2): 0.999993
+mu.gamma.0:
+-----------
+Max Gelman-Rubin diagnostic: (Cluster2) 1.000136
+Min Gelman-Rubin diagnostic: (Cluster1) 1.000017
+mu.theta.0:
+-----------
+Max Gelman-Rubin diagnostic: (3 Cluster1) 1.012859
+Min Gelman-Rubin diagnostic: (2 Cluster1) 1.000590
+tau2.gamma.0:
+-------------
+Max Gelman-Rubin diagnostic: (Cluster1) 1.001356
+Min Gelman-Rubin diagnostic: (Cluster2) 1.000404
+tau2.theta.0:
+-------------
+Max Gelman-Rubin diagnostic: (2 Cluster1) 1.007932
+Min Gelman-Rubin diagnostic: (3 Cluster2) 0.999999
+alpha.pi:
+----------
+Max Gelman-Rubin diagnostic: (4 Cluster1) 1.001155
+Min Gelman-Rubin diagnostic: (2 Cluster1) 0.999987
+beta.pi:
+--------
+Max Gelman-Rubin diagnostic: (4 Cluster1) 1.001940
+Min Gelman-Rubin diagnostic: (4 Cluster3) 1.000030
+
+Sampling Acceptance Rates:
+==========================
+theta:
+------
+[1] "Min: 0.207400, Max: 0.590283"

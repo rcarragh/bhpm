@@ -1,0 +1,120 @@
+# DEMOS AND TESTS FOR bhpm
+This directory contains demonstration analyses and test results for the bhpm package. 
+The tests cover all the main use cases of the software and exercise the available functionality.
+These may be run on Linux or Windows.
+
+There are 2 main interfaces to the package functionality:
+- bhpm.pm
+- bhpm.npm
+
+### Demonstrations Analyses
+===========================
+Demonstration analyses for the main functionality are in the ./demo directory:
+- bhpm.pm - ./demo/demo_bhpm.pm.r
+- bhpm.npm - ./demo/demo_bhpm.npm.r
+
+Each analysis follows the same set of steps:
+--------------------------------------------
+1. Load the data (file or data frame).
+2. Call the model fitting function (bhpm.pm/bhpm.nmp).
+3. Check convergence. (bhpm.convergence.diag/bhpm.print.convergence.summary).
+4. If required - produce summary statisics (bhpm.summary.stats/bhpm.print.summary.stats).
+5. Assess which adverse events are associated with treatment (bhpm.ptheta).
+
+
+### Test
+========
+The test data for the methods are in correspondingly named directories:
+- bhpm.pm
+- bhpm.npm
+Within each of these directories are subdirectories containing variations on the tests (parameter changes etc).
+
+As the Bayesian methods rely on sampling there is a degree of variation in the model outputs.
+Consequently the tests for the Bayesian methods consist of two parts:
+- Correctly predict which AEs are associated with treatment for a data set for which these outcomes are known.
+- Match the results of the previous release of the software for a given random seed. This should happen unless the order
+of sampling within the code has been changed.
+
+Tests:
+======
+1. ./bhpm.npm - test bhpm.nmp and related functions (conv, summary, ptheta):
+			./default_parameters - run with default parameters
+			./changed_parameters  - change individual simulation parameters
+			./initial_values - run model with user supplied initial values
+			./single_chain  - runs a single chain model fit wih default parameters
+2. ./bhpm.pm - test bhpm.pm and related functions (conv, summary, ptheta):
+			./changed_pm_weights - change the weighting for the point-mass mixture
+			./changed_sim_params  - change individual simulation parameters
+			./single_chain  - runs a single chain model fit wih default parameters
+			./default_parameters - run with default parameters
+			./initial_values - run model with user supplied initial values
+
+
+Within each of these tests subdirectories the following exists:
+baseline: directory containing the files:
+	conv.dat - convergence statistics from the previous software release
+	summary.dat - summary statistics from the previous software release
+	ptheta.dat - theta posterior probabilities from the previous software release
+	ptheta95.dat / ptheta80.dat - theta posterior probabilities exceeding 0.95 / 0.80
+
+test: test directory where output files are created.
+	run.r - script to run the test. The tests can be run by hand by running this script in R.
+
+run.sh/run.bat: Run the tests.
+
+check_test.sh/check_test.bat: check the test results
+
+cleanup.sh/cleanup.bat: remove generated files
+
+Example (Linux):
+================
+
+cd bhpm.pm
+cd changed_sim_params/
+
+This test to show the effect that sampling parameters may have on model convergence and
+how they may be addressed.
+
+[]$ ls
+
+baseline/       check_test.r    cleanup.bat  run.bat  test/
+check_test.bat  check_test.sh*  cleanup.sh*  run.sh*
+
+[]$ ls -l baseline/
+total 36
+-rw-r--r-- 1 xxxxxxxx domain users  1754 May 19  2019 conv.dat
+-rw-r--r-- 1 xxxxxxxx domain users   447 May 19  2019 ptheta90.dat
+-rw-r--r-- 1 xxxxxxxx domain users  8169 May 19  2019 ptheta.dat
+-rw-r--r-- 1 xxxxxxxx domain users 17788 May 19  2019 summary.dat
+
+[]$ ls test/
+run.r
+
+[]$ ./run.sh
+> source("run.r")
+[1] "######################### All events, Severity 1, Model BB level 1 #####################"
+Memory Model: HIGH
+1000 iterations...
+2000 iterations...
+:
+60000 iterations...
+MCMC fitting complete.
+[1] "Removing objects..."
+[1] "Removing objects..."
+[1] "Finished."
+Warning message:
+In RNGkind(sample.kind = "Rounding") : non-uniform 'Rounding' sampler used
+>
+
+The warning message is due to the sampling method used (changed in R 3.6.*).
+
+[]$ ls test
+conv.dat ptheta90.dat  summary.dat ptheta.dat    run.r
+
+# Check the results
+
+./check_test.sh
+echo $?
+0
+
+Test passed.

@@ -1,0 +1,42 @@
+Summary Convergence Diagnostics:
+================================
+theta:
+------
+Max Geweke statistic (2 Cluster3 Group1 Outcome1): 3.046872 (*)
+Min Geweke statistic (3 Cluster1 Group2 Outcome4): -2.366953 (*)
+gamma:
+------
+Max Geweke statistic (Cluster1 Group2 Outcome4): 2.025173 (*)
+Min Geweke statistic (Cluster2 Group3 Outcome7): -2.463859 (*)
+mu.gamma:
+---------
+Max Geweke statistic (Cluster1 Group2): 1.371755 (-)
+Min Geweke statistic (Cluster3 Group1): -2.396382 (*)
+mu.theta:
+---------
+Max Geweke statistic (2 Cluster3 Group1): 2.482023 (*)
+Min Geweke statistic (3 Cluster1 Group2): -1.930892 (-)
+sigma2.gamma:
+-------------
+Max Geweke statistic (Cluster1 Group2): 2.099867 (*)
+Min Geweke statistic (Cluster3 Group2): -1.361737 (-)
+sigma2.theta:
+-------------
+Max Geweke statistic (2 Cluster3 Group3): 2.738631 (*)
+Min Geweke statistic (3 Cluster3 Group2): -2.966160 (*)
+mu.gamma.0:
+-----------
+Max Geweke statistic: -0.666829 (-)
+Min Geweke statistic: -0.666829 (-)
+mu.theta.0:
+-----------
+Max Geweke statistic: 2 2.279194 (*)
+Min Geweke statistic: 3 -0.434393 (-)
+tau2.gamma.0:
+-------------
+Max Geweke statistic: 0.810156 (-)
+Min Geweke statistic: 0.810156 (-)
+tau2.theta.0:
+-------------
+Max Geweke statistic: 3 0.288438 (-)
+Min Geweke statistic: 2 -0.448089 (-)

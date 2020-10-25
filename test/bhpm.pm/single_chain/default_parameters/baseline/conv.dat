@@ -1,0 +1,60 @@
+Summary Convergence Diagnostics:
+================================
+theta:
+------
+Max Geweke statistic (3 Cluster2 Group2 Outcome5): 2.751109 (*)
+Min Geweke statistic (2 Cluster1 Group2 Outcome3): -3.611072 (*)
+gamma:
+------
+Max Geweke statistic (Cluster1 Group2 Outcome3): 2.293619 (*)
+Min Geweke statistic (Cluster1 Group3 Outcome9): -3.441776 (*)
+mu.gamma:
+---------
+Max Geweke statistic (Cluster1 Group1): 2.642996 (*)
+Min Geweke statistic (Cluster2 Group2): -0.201750 (-)
+mu.theta:
+---------
+Max Geweke statistic (3 Cluster1 Group2): 2.248135 (*)
+Min Geweke statistic (3 Cluster2 Group1): -2.575707 (*)
+sigma2.gamma:
+-------------
+Max Geweke statistic (Cluster1 Group3): 1.337125 (-)
+Min Geweke statistic (Cluster3 Group1): -1.530530 (-)
+sigma2.theta:
+-------------
+Max Geweke statistic (2 Cluster2 Group2): 1.194467 (-)
+Min Geweke statistic (3 Cluster3 Group2): -2.209539 (*)
+pi:
+---
+Max Geweke statistic (2 Cluster2 Group2): 2.018797 (*)
+Min Geweke statistic (4 Cluster1 Group3): -2.585901 (*)
+mu.gamma.0:
+-----------
+Max Geweke statistic: (Cluster1) 2.828428 (*)
+Min Geweke statistic: (Cluster3) -0.385395 (-)
+mu.theta.0:
+-----------
+Max Geweke statistic: (3 Cluster1) 2.169827 (*)
+Min Geweke statistic: (3 Cluster2) -2.432628 (*)
+tau2.gamma.0:
+-------------
+Max Geweke statistic: (Cluster1) 0.356310 (-)
+Min Geweke statistic: (Cluster3) 0.189141 (-)
+tau2.theta.0:
+-------------
+Max Geweke statistic: (2 Cluster2) 1.667357 (-)
+Min Geweke statistic: (4 Cluster1) -2.130802 (*)
+alpha.pi:
+----------
+Max Geweke statistic: (2 Cluster1) 0.760968 (-)
+Min Geweke statistic: (3 Cluster3) -1.496060 (-)
+beta.pi:
+----------
+Max Geweke statistic: (4 Cluster1) 1.577828 (-)
+Min Geweke statistic: (2 Cluster2) -0.918167 (-)
+
+Sampling Acceptance Rates:
+==========================
+theta:
+------
+[1] "Min: 0.207633, Max: 0.585833"

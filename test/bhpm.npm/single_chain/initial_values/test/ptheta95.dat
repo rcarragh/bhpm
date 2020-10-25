@@ -1,0 +1,6 @@
+"Trt.Grp" "Cluster" "Outcome.Grp" "Outcome" "ptheta" "ptheta.pos" "ptheta.zero" "ptheta.neg"
+"3" 2 "Cluster1" "Group2" "Outcome3" 0.9996 0.9996 0 4e-04
+"4" 2 "Cluster1" "Group2" "Outcome4" 0.9999 0.9999 0 1e-04
+"12" 2 "Cluster2" "Group2" "Outcome3" 0.999733333333333 0.999733333333333 0 0.000266666666666667
+"21" 2 "Cluster3" "Group2" "Outcome3" 1 1 0 0
+"35" 3 "Cluster1" "Group3" "Outcome8" 0.9775 0.9775 0 0.0225
