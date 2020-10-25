@@ -475,6 +475,7 @@ void bhpmBB_poisson_mc_hier3_lev2::releaseL3Variables()
 		for (c = 0; c < gChains; c++) {
 			delete [] beta_pi[c];
 		}
+		delete [] beta_pi;
 		beta_pi = NULL;
 	}
 
@@ -1380,39 +1381,39 @@ void bhpmBB_poisson_mc_hier3_lev2::releaseL3Samples()
 
 	if (mu_gamma_0_samples != NULL) {
 		for (c = 0; c < gChains; c++) {
-            free(mu_gamma_0_samples[c]);
+            delete mu_gamma_0_samples[c];
 		}
-		free(mu_gamma_0_samples);
+		delete [] mu_gamma_0_samples;
 		mu_gamma_0_samples = NULL;
 	}
 
 	if (mu_theta_0_samples != NULL) {
 		for (c = 0; c < gChains; c++) {
 			for (t = 0; t < gNumComparators; t++) {
-            	free(mu_theta_0_samples[c][t]);
+            	delete [] mu_theta_0_samples[c][t];
 			}
-            free(mu_theta_0_samples[c]);
+            delete [] mu_theta_0_samples[c];
 		}
-		free(mu_theta_0_samples);
+		delete [] mu_theta_0_samples;
 		mu_theta_0_samples = NULL;
 	}
 
 	if (tau2_gamma_0_samples != NULL) {
 		for (c = 0; c < gChains; c++) {
-            free(tau2_gamma_0_samples[c]);
+            delete [] tau2_gamma_0_samples[c];
 		}
-		free(tau2_gamma_0_samples);
+		delete [] tau2_gamma_0_samples;
 		tau2_gamma_0_samples = NULL;
 	}
 
 	if (tau2_theta_0_samples != NULL) {
 		for (c = 0; c < gChains; c++) {
 			for (t = 0; t < gNumComparators; t++) {
-				free(tau2_theta_0_samples[c][t]);
+				delete [] tau2_theta_0_samples[c][t];
 			}
-            free(tau2_theta_0_samples[c]);
+            delete [] tau2_theta_0_samples[c];
 		}
-		free(tau2_theta_0_samples);
+		delete [] tau2_theta_0_samples;
 		tau2_theta_0_samples = NULL;
 	}
 }
@@ -1498,6 +1499,7 @@ SEXP bhpmBB_poisson_mc_hier3_lev2::getL3Samples(double*** &data)
 			i += (gIter - gBurnin);
 			delete [] data[c][t];
 		}
+		delete [] data[c];
 		data[c] = NULL;
 	}
 	delete [] data;

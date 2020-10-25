@@ -188,7 +188,7 @@ void bhpm1a_poisson_mc_hier3_lev1::initL2Variables(SEXP pmu_gamma, SEXP pmu_thet
 
 void bhpm1a_poisson_mc_hier3_lev1::releaseL2Variables()
 {
-	int c = 0;
+	int c = 0, t = 0;
 
 	if (mu_gamma != NULL) {
 		for (c = 0; c < gChains; c++) {
@@ -200,6 +200,9 @@ void bhpm1a_poisson_mc_hier3_lev1::releaseL2Variables()
 
 	if (mu_theta != NULL) {
 		for (c = 0; c < gChains; c++) {
+			for (t = 0; t < gNumComparators; t++) {
+				delete [] mu_theta[c][t];
+			}
 			delete [] mu_theta[c];
 		}
 		delete [] mu_theta;
@@ -216,6 +219,9 @@ void bhpm1a_poisson_mc_hier3_lev1::releaseL2Variables()
 
 	if (sigma2_theta != NULL) {
 		for (c = 0; c < gChains; c++) {
+			for (t = 0; t < gNumComparators; t++) {
+				delete [] sigma2_theta[c][t];
+			}
 			delete [] sigma2_theta[c];
 		}
 		delete [] sigma2_theta;
