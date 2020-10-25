@@ -2,41 +2,41 @@ Summary Convergence Diagnostics:
 ================================
 theta:
 ------
-Max Geweke statistic (2 Cluster3 Group1 Outcome1): 3.046872 (*)
-Min Geweke statistic (3 Cluster1 Group2 Outcome4): -2.366953 (*)
+Max Geweke statistic (3 M/65-84 G00-G99 G00-99_Outcome1): 2.068226 (*)
+Min Geweke statistic (2 M/65-84 I00-I99 I00-99_Outcome1): -2.222331 (*)
 gamma:
 ------
-Max Geweke statistic (Cluster1 Group2 Outcome4): 2.025173 (*)
-Min Geweke statistic (Cluster2 Group3 Outcome7): -2.463859 (*)
+Max Geweke statistic (M/65-84 I00-I99 I00-99_Outcome1): 2.034196 (*)
+Min Geweke statistic (M/65-84 G00-G99 G00-99_Outcome1): -1.928170 (-)
 mu.gamma:
 ---------
-Max Geweke statistic (Cluster1 Group2): 1.371755 (-)
-Min Geweke statistic (Cluster3 Group1): -2.396382 (*)
+Max Geweke statistic (M/0-64 Bleed): 0.492164 (-)
+Min Geweke statistic (M/65-84 Bleed): -1.580202 (-)
 mu.theta:
 ---------
-Max Geweke statistic (2 Cluster3 Group1): 2.482023 (*)
-Min Geweke statistic (3 Cluster1 Group2): -1.930892 (-)
+Max Geweke statistic (3 M/65-84 G00-G99): 1.974349 (*)
+Min Geweke statistic (3 M/0-64 G00-G99): -1.765524 (-)
 sigma2.gamma:
 -------------
-Max Geweke statistic (Cluster1 Group2): 2.099867 (*)
-Min Geweke statistic (Cluster3 Group2): -1.361737 (-)
+Max Geweke statistic (M/0-64 Bleed): 1.500421 (-)
+Min Geweke statistic (M/65-84 I00-I99): -2.008801 (*)
 sigma2.theta:
 -------------
-Max Geweke statistic (2 Cluster3 Group3): 2.738631 (*)
-Min Geweke statistic (3 Cluster3 Group2): -2.966160 (*)
+Max Geweke statistic (2 M/65-84 I00-I99): 1.511792 (-)
+Min Geweke statistic (4 M/65-84 G00-G99): -2.265060 (*)
 mu.gamma.0:
 -----------
-Max Geweke statistic: -0.666829 (-)
-Min Geweke statistic: -0.666829 (-)
+Max Geweke statistic: -0.477815 (-)
+Min Geweke statistic: -0.477815 (-)
 mu.theta.0:
 -----------
-Max Geweke statistic: 2 2.279194 (*)
-Min Geweke statistic: 3 -0.434393 (-)
+Max Geweke statistic: 2 1.203407 (-)
+Min Geweke statistic: 4 -0.518591 (-)
 tau2.gamma.0:
 -------------
-Max Geweke statistic: 0.810156 (-)
-Min Geweke statistic: 0.810156 (-)
+Max Geweke statistic: 0.075823 (-)
+Min Geweke statistic: 0.075823 (-)
 tau2.theta.0:
 -------------
-Max Geweke statistic: 3 0.288438 (-)
-Min Geweke statistic: 2 -0.448089 (-)
+Max Geweke statistic: 4 0.495355 (-)
+Min Geweke statistic: 3 -2.031512 (*)

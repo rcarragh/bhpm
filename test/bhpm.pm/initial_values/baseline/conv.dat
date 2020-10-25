@@ -2,35 +2,35 @@ Summary Convergence Diagnostics:
 ================================
 theta:
 ------
-Max Gelman-Rubin diagnostic (4 Cluster1 Group3 Outcome9): 1.036433
-Min Gelman-Rubin diagnostic (2 Cluster2, Group2 Outcome4): 1.000035
+Max Gelman-Rubin diagnostic (4 M/85+ Bleed Bleed_Outcome3): 1.038506
+Min Gelman-Rubin diagnostic (2 M/65-84, Bleed Bleed_Outcome3): 1.000039
 gamma:
 ------
-Max Gelman-Rubin diagnostic (Cluster1 Group2 Outcome3): 1.002803
-Min Gelman-Rubin diagnostic (Cluster2 Group3 Outcome7): 0.999984
+Max Gelman-Rubin diagnostic (M/0-64 G00-G99 G00-99_Outcome2): 1.000579
+Min Gelman-Rubin diagnostic (M/0-64 Bleed Bleed_Outcome3): 0.999993
 mu.gamma:
 ---------
-Max Gelman-Rubin diagnostic (Group1): 1.000056
-Min Gelman-Rubin diagnostic (Group3): 1.000013
+Max Gelman-Rubin diagnostic (G00-G99): 1.000025
+Min Gelman-Rubin diagnostic (I00-I99): 0.999995
 mu.theta:
 ---------
-Max Gelman-Rubin diagnostic (2 Group2): 1.000087
-Min Gelman-Rubin diagnostic (2 Group1): 0.999987
+Max Gelman-Rubin diagnostic (3 I00-I99): 1.000122
+Min Gelman-Rubin diagnostic (2 Bleed): 0.999989
 sigma2.gamma:
 -------------
-Max Gelman-Rubin diagnostic (Group1): 1.000092
-Min Gelman-Rubin diagnostic (Group3): 1.000014
+Max Gelman-Rubin diagnostic (Bleed): 1.000049
+Min Gelman-Rubin diagnostic (I00-I99): 1.000010
 sigma2.theta:
 -------------
-Max Gelman-Rubin diagnostic (3 Group1): 1.009295
-Min Gelman-Rubin diagnostic (4 Group1): 1.000000
+Max Gelman-Rubin diagnostic (3 I00-I99): 1.003075
+Min Gelman-Rubin diagnostic (3 Bleed): 1.000072
 pi:
 ---
-Max Gelman-Rubin diagnostic (3 Group3): 1.000737
-Min Gelman-Rubin diagnostic (4 Group3): 0.999989
+Max Gelman-Rubin diagnostic (4 G00-G99): 1.000717
+Min Gelman-Rubin diagnostic (2 G00-G99): 0.999995
 
 Sampling Acceptance Rates:
 ==========================
 theta:
 ------
-[1] "Min: 0.117450, Max: 0.563717"
+[1] "Min: 0.115333, Max: 0.567317"

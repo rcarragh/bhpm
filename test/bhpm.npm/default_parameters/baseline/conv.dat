@@ -2,41 +2,41 @@ Summary Convergence Diagnostics:
 ================================
 theta:
 ------
-Max Gelman-Rubin diagnostic (4 Cluster2 Group3 Outcome8): 1.001319
-Min Gelman-Rubin diagnostic (4 Cluster1, Group2 Outcome4): 0.999997
+Max Gelman-Rubin diagnostic (4 M/0-64 Bleed Bleed_Outcome4): 1.001159
+Min Gelman-Rubin diagnostic (2 M/85+, G00-G99 G00-99_Outcome2): 0.999994
 gamma:
 ------
-Max Gelman-Rubin diagnostic (Cluster3 Group3 Outcome9): 1.001798
-Min Gelman-Rubin diagnostic (Cluster1 Group1 Outcome2): 1.000014
+Max Gelman-Rubin diagnostic (M/85+ I00-I99 I00-99_Outcome2): 1.001468
+Min Gelman-Rubin diagnostic (M/85+ G00-G99 G00-99_Outcome3): 1.000021
 mu.gamma:
 ---------
-Max Gelman-Rubin diagnostic (Cluster3 Group1): 1.000486
-Min Gelman-Rubin diagnostic (Cluster1 Group3): 0.999996
+Max Gelman-Rubin diagnostic (M/85+ Bleed): 1.000118
+Min Gelman-Rubin diagnostic (M/85+ I00-I99): 1.000018
 mu.theta:
 ---------
-Max Gelman-Rubin diagnostic (4 Cluster3 Group3): 1.000654
-Min Gelman-Rubin diagnostic (3 Cluster1 Group1): 1.000008
+Max Gelman-Rubin diagnostic (3 M/0-64 G00-G99): 1.000457
+Min Gelman-Rubin diagnostic (2 M/85+ G00-G99): 0.999979
 sigma2.gamma:
 -------------
-Max Gelman-Rubin diagnostic (Cluster3 Group2): 1.000377
-Min Gelman-Rubin diagnostic (Cluster1 Group3): 1.000042
+Max Gelman-Rubin diagnostic (M/0-64 I00-I99): 1.014336
+Min Gelman-Rubin diagnostic (M/65-84 G00-G99): 0.999973
 sigma2.theta:
 -------------
-Max Gelman-Rubin diagnostic (4 Cluster2 Group1): 1.002739
-Min Gelman-Rubin diagnostic (2 Cluster1 Group1): 1.000047
+Max Gelman-Rubin diagnostic (2 M/65-84 I00-I99): 1.006197
+Min Gelman-Rubin diagnostic (3 M/0-64 Bleed): 0.999996
 mu.gamma.0:
 -----------
-Max Gelman-Rubin diagnostic: (Cluster3) 1.000287
-Min Gelman-Rubin diagnostic: (Cluster1) 1.000032
+Max Gelman-Rubin diagnostic: (M/85+) 1.000164
+Min Gelman-Rubin diagnostic: (M/65-84) 1.000108
 mu.theta.0:
 -----------
-Max Gelman-Rubin diagnostic: (4 Cluster3) 1.000087
-Min Gelman-Rubin diagnostic: (3 Cluster3) 0.999978
+Max Gelman-Rubin diagnostic: (4 M/85+) 1.000211
+Min Gelman-Rubin diagnostic: (3 M/0-64) 1.000015
 tau2.gamma.0:
 -------------
-Max Gelman-Rubin diagnostic: (Cluster3) 1.003424
-Min Gelman-Rubin diagnostic: (Cluster2) 1.000676
+Max Gelman-Rubin diagnostic: (M/65-84) 1.015584
+Min Gelman-Rubin diagnostic: (M/0-64) 1.000028
 tau2.theta.0:
 -------------
-Max Gelman-Rubin diagnostic: (3 Cluster2) 1.014454
-Min Gelman-Rubin diagnostic: (3 Cluster1) 1.000137
+Max Gelman-Rubin diagnostic: (2 M/65-84) 1.002499
+Min Gelman-Rubin diagnostic: (3 M/85+) 1.000375

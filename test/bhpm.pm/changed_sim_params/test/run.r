@@ -7,10 +7,10 @@ print("######################### All events, Severity 1, Model BB level 1 ######
 data(demo.cluster.data)
 
 s.p = bhpm.sim.control.params(demo.cluster.data, "BB")
-s.p1 = s.p[s.p$type == "SLICE" & s.p$Outcome.Grp == "Group1" & s.p$Outcome %in% c("Outcome1", "Outcome2"), ]
+s.p1 = s.p[s.p$type == "SLICE" & s.p$Outcome.Grp == "I00-I99" & s.p$Outcome %in% c("I00-99_Outcome1", "I00-99_Outcome2"), ]
 s.p1$value = 2
 s.p1$control = 7
-s.p2 = s.p[s.p$type == "MH" & s.p$variable == "theta" & s.p$Outcome.Grp == "Group2" & s.p$Outcome %in% c("Outcome3", "Outcome4", "Outcome5"), ]
+s.p2 = s.p[s.p$type == "MH" & s.p$variable == "theta" & s.p$Outcome.Grp == "I00-I99" & s.p$Outcome %in% c("I00-99_Outcome1", "I00-99_Outcome2", "I00-99_Outcome3"), ]
 s.p2$value = 0.22
 s.p = rbind(s.p1, s.p2)
 

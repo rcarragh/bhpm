@@ -6,7 +6,7 @@ set.seed(24002)
 print("######################### All events, Severity 1, Model BB level 1 #####################")
 data(demo.cluster.data)
 pm = bhpm.pointmass.weights(demo.cluster.data)
-pm = pm[pm$Outcome.Grp == "Group2" & pm$Outcome %in% c("Outcome5", "Outcome6", "Outcome7"),]
+pm = pm[pm$Outcome.Grp == "G00-G99" & pm$Outcome %in% c("G00-99_Outcome1", "G00-99_Outcome2", "G00-99_Outcome3"),]
 pm$weight_pm = 0.6
 
 set.seed(17902)

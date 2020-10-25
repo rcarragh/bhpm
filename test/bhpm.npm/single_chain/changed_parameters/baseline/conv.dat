@@ -2,25 +2,25 @@ Summary Convergence Diagnostics:
 ================================
 theta:
 ------
-Max Geweke statistic (2 Cluster1 Group1 Outcome1): 2.575415 (*)
-Min Geweke statistic (3 Cluster1 Group3 Outcome8): -2.511326 (*)
+Max Geweke statistic (4 M/65-84 I00-I99 I00-99_Outcome1): 2.198912 (*)
+Min Geweke statistic (2 M/0-64 G00-G99 G00-99_Outcome3): -2.401341 (*)
 gamma:
 ------
-Max Geweke statistic (Cluster1 Group3 Outcome8): 2.251967 (*)
-Min Geweke statistic (Cluster3 Group1 Outcome1): -2.157991 (*)
+Max Geweke statistic (M/0-64 G00-G99 G00-99_Outcome3): 2.063297 (*)
+Min Geweke statistic (M/65-84 I00-I99 I00-99_Outcome1): -1.995909 (*)
 mu.gamma:
 ---------
-Max Geweke statistic (Group2): -0.087128 (-)
-Min Geweke statistic (Group1): -2.516200 (*)
+Max Geweke statistic (G00-G99): 1.101954 (-)
+Min Geweke statistic (Bleed): 0.041948 (-)
 mu.theta:
 ---------
-Max Geweke statistic (4 Group1): 2.244876 (*)
-Min Geweke statistic (3 Group3): -1.972305 (*)
+Max Geweke statistic (4 I00-I99): 0.713336 (-)
+Min Geweke statistic (2 G00-G99): -1.871555 (-)
 sigma2.gamma:
 -------------
-Max Geweke statistic (Group1): -0.020303 (-)
-Min Geweke statistic (Group2): -2.896433 (*)
+Max Geweke statistic (Bleed): 0.854636 (-)
+Min Geweke statistic (I00-I99): -1.073941 (-)
 sigma2.theta:
 -------------
-Max Geweke statistic (2 Group2): 1.373117 (-)
-Min Geweke statistic (2 Group1): -2.128960 (*)
+Max Geweke statistic (3 I00-I99): 1.211202 (-)
+Min Geweke statistic (2 Bleed): -0.785407 (-)

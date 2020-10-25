@@ -2,39 +2,39 @@ Summary Convergence Diagnostics:
 ================================
 theta:
 ------
-Max Gelman-Rubin diagnostic (4 Cluster3 Group1 Outcome1): 1.001151
-Min Gelman-Rubin diagnostic (3 Cluster1, Group3 Outcome7): 0.999982
+Max Gelman-Rubin diagnostic (4 M/65-84 G00-G99 G00-99_Outcome1): 1.001118
+Min Gelman-Rubin diagnostic (2 M/0-64, Bleed Bleed_Outcome1): 0.999972
 gamma:
 ------
-Max Gelman-Rubin diagnostic (Cluster3 Group1 Outcome1): 1.001494
-Min Gelman-Rubin diagnostic (Cluster1 Group1 Outcome2): 1.000023
+Max Gelman-Rubin diagnostic (M/0-64 Bleed Bleed_Outcome2): 1.001530
+Min Gelman-Rubin diagnostic (M/65-84 Bleed Bleed_Outcome2): 1.000061
 mu.gamma:
 ---------
 mu.theta:
 ---------
-Max Gelman-Rubin diagnostic (4 Group1): 1.000384
-Min Gelman-Rubin diagnostic (4 Group3): 0.999978
+Max Gelman-Rubin diagnostic (4 Bleed): 1.000273
+Min Gelman-Rubin diagnostic (2 I00-I99): 1.000004
 sigma2.gamma:
 -------------
-Max Gelman-Rubin diagnostic (Group2): 1.000428
-Min Gelman-Rubin diagnostic (Group1): 1.000022
+Max Gelman-Rubin diagnostic (Bleed): 1.000122
+Min Gelman-Rubin diagnostic (I00-I99): 1.000015
 sigma2.theta:
 -------------
-Max Gelman-Rubin diagnostic (3 Group1): 1.000590
-Min Gelman-Rubin diagnostic (2 Group3): 1.000014
+Max Gelman-Rubin diagnostic (2 I00-I99): 1.000688
+Min Gelman-Rubin diagnostic (2 G00-G99): 1.000011
 mu.gamma.0:
 -----------
-Max Gelman-Rubin diagnostic: 1.000275
-Min Gelman-Rubin diagnostic: 1.000275
+Max Gelman-Rubin diagnostic: 1.000098
+Min Gelman-Rubin diagnostic: 1.000098
 mu.theta.0:
 -----------
-Max Gelman-Rubin diagnostic: 2 1.000173
-Min Gelman-Rubin diagnostic: 3 1.000072
+Max Gelman-Rubin diagnostic: 2 1.000198
+Min Gelman-Rubin diagnostic: 4 1.000016
 tau2.gamma.0:
 -------------
-Max Gelman-Rubin diagnostic: 1.000382
-Min Gelman-Rubin diagnostic: 1.000382
+Max Gelman-Rubin diagnostic: 1.000872
+Min Gelman-Rubin diagnostic: 1.000872
 tau2.theta.0:
 -------------
-Max Gelman-Rubin diagnostic: 3 1.000556
-Min Gelman-Rubin diagnostic: 4 1.000331
+Max Gelman-Rubin diagnostic: 3 1.002811
+Min Gelman-Rubin diagnostic: 2 1.000109

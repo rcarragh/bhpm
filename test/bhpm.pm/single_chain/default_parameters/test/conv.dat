@@ -2,59 +2,59 @@ Summary Convergence Diagnostics:
 ================================
 theta:
 ------
-Max Geweke statistic (3 Cluster2 Group2 Outcome5): 2.751109 (*)
-Min Geweke statistic (2 Cluster1 Group2 Outcome3): -3.611072 (*)
+Max Geweke statistic (4 M/0-64 I00-I99 I00-99_Outcome1): 2.396410 (*)
+Min Geweke statistic (3 M/65-84 Bleed Bleed_Outcome1): -2.056782 (*)
 gamma:
 ------
-Max Geweke statistic (Cluster1 Group2 Outcome3): 2.293619 (*)
-Min Geweke statistic (Cluster1 Group3 Outcome9): -3.441776 (*)
+Max Geweke statistic (M/0-64 Bleed Bleed_Outcome1): 2.292774 (*)
+Min Geweke statistic (M/85+ Bleed Bleed_Outcome4): -2.076550 (*)
 mu.gamma:
 ---------
-Max Geweke statistic (Cluster1 Group1): 2.642996 (*)
-Min Geweke statistic (Cluster2 Group2): -0.201750 (-)
+Max Geweke statistic (M/85+ G00-G99): 1.595072 (-)
+Min Geweke statistic (M/0-64 I00-I99): -0.802510 (-)
 mu.theta:
 ---------
-Max Geweke statistic (3 Cluster1 Group2): 2.248135 (*)
-Min Geweke statistic (3 Cluster2 Group1): -2.575707 (*)
+Max Geweke statistic (4 M/65-84 G00-G99): 1.711709 (-)
+Min Geweke statistic (3 M/85+ G00-G99): -1.995015 (*)
 sigma2.gamma:
 -------------
-Max Geweke statistic (Cluster1 Group3): 1.337125 (-)
-Min Geweke statistic (Cluster3 Group1): -1.530530 (-)
+Max Geweke statistic (M/85+ G00-G99): 0.964581 (-)
+Min Geweke statistic (M/0-64 G00-G99): -2.486938 (*)
 sigma2.theta:
 -------------
-Max Geweke statistic (2 Cluster2 Group2): 1.194467 (-)
-Min Geweke statistic (3 Cluster3 Group2): -2.209539 (*)
+Max Geweke statistic (4 M/85+ G00-G99): 1.632337 (-)
+Min Geweke statistic (3 M/0-64 Bleed): -2.248692 (*)
 pi:
 ---
-Max Geweke statistic (2 Cluster2 Group2): 2.018797 (*)
-Min Geweke statistic (4 Cluster1 Group3): -2.585901 (*)
+Max Geweke statistic (4 M/85+ G00-G99): 2.537143 (*)
+Min Geweke statistic (2 M/0-64 G00-G99): -1.970706 (*)
 mu.gamma.0:
 -----------
-Max Geweke statistic: (Cluster1) 2.828428 (*)
-Min Geweke statistic: (Cluster3) -0.385395 (-)
+Max Geweke statistic: (M/85+) 1.819158 (-)
+Min Geweke statistic: (M/65-84) -1.080502 (-)
 mu.theta.0:
 -----------
-Max Geweke statistic: (3 Cluster1) 2.169827 (*)
-Min Geweke statistic: (3 Cluster2) -2.432628 (*)
+Max Geweke statistic: (4 M/65-84) 1.656478 (-)
+Min Geweke statistic: (3 M/85+) -1.873927 (-)
 tau2.gamma.0:
 -------------
-Max Geweke statistic: (Cluster1) 0.356310 (-)
-Min Geweke statistic: (Cluster3) 0.189141 (-)
+Max Geweke statistic: (M/0-64) 2.035687 (*)
+Min Geweke statistic: (M/65-84) -0.978773 (-)
 tau2.theta.0:
 -------------
-Max Geweke statistic: (2 Cluster2) 1.667357 (-)
-Min Geweke statistic: (4 Cluster1) -2.130802 (*)
+Max Geweke statistic: (2 M/85+) 1.089395 (-)
+Min Geweke statistic: (2 M/0-64) -2.418568 (*)
 alpha.pi:
 ----------
-Max Geweke statistic: (2 Cluster1) 0.760968 (-)
-Min Geweke statistic: (3 Cluster3) -1.496060 (-)
+Max Geweke statistic: (3 M/85+) 1.052695 (-)
+Min Geweke statistic: (2 M/0-64) -1.774987 (-)
 beta.pi:
 ----------
-Max Geweke statistic: (4 Cluster1) 1.577828 (-)
-Min Geweke statistic: (2 Cluster2) -0.918167 (-)
+Max Geweke statistic: (4 M/65-84) 1.651242 (-)
+Min Geweke statistic: (3 M/85+) -1.651263 (-)
 
 Sampling Acceptance Rates:
 ==========================
 theta:
 ------
-[1] "Min: 0.207633, Max: 0.585833"
+[1] "Min: 0.207583, Max: 0.588433"

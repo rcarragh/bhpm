@@ -5,7 +5,7 @@ set.seed(3006)
 print("######################### All events, Severity 1, Model 1a_independent #####################")
 data(demo.cluster.data)
 s.p = bhpm.sim.control.params(demo.cluster.data)
-s.p = s.p[s.p$Outcome.Grp == "Group1" & s.p$Outcome == "Outcome1", ]
+s.p = s.p[s.p$Outcome.Grp == "I00-I99" & s.p$Outcome == "I00-99_Outcome1", ]
 s.p$value = 2
 s.p$control = 7
 raw = bhpm.npm(demo.cluster.data, sim.params = s.p)
