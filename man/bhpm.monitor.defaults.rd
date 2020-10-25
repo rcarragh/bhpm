@@ -33,8 +33,11 @@ R. Carragher
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-\dontrun{
-bhpm.monitor.defaults("BB", 3)
+mon <- bhpm.monitor.defaults("BB", 3)
+print(mon)
+\donttest{
+mon <- bhpm.monitor.defaults("BB", 3)
+print(mon)
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

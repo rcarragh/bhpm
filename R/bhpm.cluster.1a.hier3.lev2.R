@@ -6,7 +6,7 @@
 
 Md <- new.env()
 
-Md$Id <- "$Id: bhpm.cluster.1a.hier3.lev2.R,v 1.12 2019/05/30 13:32:26 clb13102 Exp clb13102 $"
+Md$Id <- "$Id: bhpm.cluster.1a.hier3.lev2.R,v 1.13 2020/03/31 12:42:23 clb13102 Exp clb13102 $"
 
 bhpm.cluster.1a.dep.lev2 <- function(cluster.data, sim_type = "SLICE", burnin = 10000, iter = 40000, nchains = 3,
 	global.sim.params = data.frame(type = c("MH", "SLICE"), param = c("sigma_MH", "w"), value = c(0.2,1),
@@ -34,7 +34,7 @@ bhpm.cluster.1a.dep.lev2 <- function(cluster.data, sim_type = "SLICE", burnin = 
 	Md$sim_type <- sim_type
 
 	if (nrow(global.sim.params[global.sim.params$type == sim_type,]) != 1) {
-		print("Missing simulation parametetrs");
+		message("Missing simulation parametetrs");
 		return(NULL)
 	}
 
@@ -42,7 +42,7 @@ bhpm.cluster.1a.dep.lev2 <- function(cluster.data, sim_type = "SLICE", burnin = 
 	Md$global.sim.param_ctrl <- global.sim.params[global.sim.params$type == sim_type,]$control
 
 	if (Md$global.sim.param <= 0) {
-		print("Invalid simulation parametetr value");
+		message("Invalid simulation parametetr value");
 		return(NULL)
 	}
 

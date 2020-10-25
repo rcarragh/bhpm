@@ -31,15 +31,9 @@ R. Carragher
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-\dontrun{
 data(bhpm.cluster.data1)
 pmw <- bhpm.pointmass.weights(bhpm.cluster.data1)
 head(pmw, 2)
-      Cluster Outcome.Grp  Outcome Trt.Grp weight_pm
-1   0.0-180.0   Bdy-sys_1 Adv-Ev_1       2       0.5
-2 180.0-360.0   Bdy-sys_1 Adv-Ev_1       2       0.5
-
-}
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

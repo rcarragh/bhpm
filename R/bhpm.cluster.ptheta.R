@@ -3,51 +3,51 @@
 # R. Carragher
 # Date: 29/06/2018
 
-Id <- "$Id: bhpm.cluster.ptheta.R,v 1.10 2019/06/03 11:06:42 clb13102 Exp clb13102 $"
+Id <- "$Id: bhpm.cluster.ptheta.R,v 1.11 2020/03/31 12:42:23 clb13102 Exp clb13102 $"
 
 bhpm.cluster.ptheta <- function(raw)
 {
 	if (is.null(raw)) {
-		print("NULL raw data");
+		message("NULL raw data");
 		return(NULL)
 	}
 
 	model = attr(raw, "model")
 	if (is.null(model)) {
-		print("Missing model attribute");
+		message("Missing model attribute");
 		return(NULL)
 	}
 
 	if (!("chains" %in% names(raw))) {
-		print("Missing chains data");
+		message("Missing chains data");
 		return(NULL)
 	}
 	if (!("maxOutcome.Grps" %in% names(raw))) {
-		print("Missing chains data");
+		message("Missing chains data");
 		return(NULL)
 	}
 	if (!("nOutcome.Grp" %in% names(raw))) {
-		print("Missing chains data");
+		message("Missing chains data");
 		return(NULL)
 	}
 	if (!("maxOutcomes" %in% names(raw))) {
-		print("Missing chains data");
+		message("Missing chains data");
 		return(NULL)
 	}
 	if (!("nOutcome" %in% names(raw))) {
-		print("Missing nOutcome data");
+		message("Missing nOutcome data");
 		return(NULL)
 	}
 	if (!("theta" %in% names(raw))) {
-		print("Missing theta data");
+		message("Missing theta data");
 		return(NULL)
 	}
 	if (!("Outcome.Grp" %in% names(raw))) {
-		print("Missing Outcome.Grp data");
+		message("Missing Outcome.Grp data");
 		return(NULL)
 	}
 	if (!("Outcome" %in% names(raw))) {
-		print("Missing Outcome data");
+		message("Missing Outcome data");
 		return(NULL)
 	}
 

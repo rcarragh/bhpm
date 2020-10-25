@@ -165,8 +165,10 @@ The function performs the simulation and returns the raw output. No checks for c
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-\dontrun{
-data(bhpm.clusters.data1)
+data(bhpm.cluster.data1)
+raw = bhpm.cluster.1a.hier3(bhpm.cluster.data1, level = 1, burnin = 100, iter = 200)
+\donttest{
+data(bhpm.cluster.data1)
 raw = bhpm.cluster.1a.hier3(bhpm.cluster.data1, level = 1)
 }
 }

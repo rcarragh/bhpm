@@ -26,18 +26,17 @@ R. Carragher
 
 \examples{
 
-\dontrun{
 data(bhpm.cluster.data1)
-raw = bhpm.BB(bhpm.cluster.data1)
-}
-
-\dontrun{
-p = bhpm.BB.ptheta(raw)
-
+data <- subset(bhpm.cluster.data1, Cluster == '0.0-180.0' | Cluster == '180.0-360.0')
+raw = bhpm.npm(data, burnin = 10, iter = 100)
+p = bhpm.ptheta(raw)
 head(p, 2)
-  Trt.Grp   Cluster Outcome.Grp   Outcome     ptheta ptheta.pos ptheta.zero ptheta.neg
-1       2 0.0-180.0   Bdy-sys_1  Adv-Ev_1 0.83874074 0.83874074           0  0.1612593
-2       2 0.0-180.0   Bdy-sys_1 Adv-Ev_10 0.06785185 0.06785185           0  0.9321481
+
+\donttest{
+data(bhpm.cluster.data1)
+raw = bhpm.npm(bhpm.cluster.data1)
+p = bhpm.ptheta(raw)
+head(p, 2)
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

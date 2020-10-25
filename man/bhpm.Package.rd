@@ -10,14 +10,15 @@ This package implements Bayesian Hierarchical models for the detection of differ
 The methods implemented use assumed groupings of outcomes to 
 detect differences in the occurrence of the outcome for different treatments. Methods based on Bayesian Hierarchical
 models are provided.
-
+The methods are extension of those described in Carragher (2017) for multiple treatments and clusters.
 }
 \author{
 R. Carragher<raymond.carragher@strath.ac.uk; rcarragh@gmail.com>
 }
 
-%\references{
-%}
+\references{
+Carragher R. Detection of Safety Signals in Randomised Controlled Trials. PhD thesis. University of Strathclyde, 2017 <https://ethos.bl.uk/OrderDetails.do?uin=uk.bl.ethos.736866>.
+}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 

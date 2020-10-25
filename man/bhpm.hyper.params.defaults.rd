@@ -33,8 +33,11 @@ R. Carragher
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-\dontrun{
-bhpm.hyper.param.defaults("BB", 3)
+h.p <- bhpm.hyper.param.defaults("BB", 3)
+print(h.p$mu.gamma.0.0)
+\donttest{
+h.p <- bhpm.hyper.param.defaults("BB", 3)
+print(h.p$mu.gamma.0.0)
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

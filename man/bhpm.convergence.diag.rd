@@ -49,10 +49,14 @@ R. Carragher
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-
-\dontrun{
 data(bhpm.cluster.data1)
-raw = bhpm.cluster.BB.hier3(bhpm.cluster.data1)
+data <- subset(bhpm.cluster.data1, Cluster == '0.0-180.0' | Cluster == '180.0-360.0')
+raw = bhpm.npm(data, burnin = 100, iter = 200)
+conv = bhpm.convergence.diag(raw)
+
+\donttest{
+data(bhpm.cluster.data1)
+raw = bhpm.npm(bhpm.cluster.data1)
 conv = bhpm.convergence.diag(raw)
 }
 }

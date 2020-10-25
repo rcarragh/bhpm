@@ -11,7 +11,7 @@ M_global$checkCols <- function(cols, table) {
 	for (i in 1:length(cols)) {
 
 		if (!(cols[i] %in% colnames(table))) {
-			print(sprintf("Missing %s column", cols[i]));
+			message(sprintf("Missing %s column", cols[i]));
 			return(1)
 		}
 	}
@@ -23,7 +23,7 @@ M_global$checkNames <- function(n, table) {
 	for (i in 1:length(n)) {
 
 		if (!(n[i] %in% names(table))) {
-			print(sprintf("Missing %s data", n[i]));
+			message(sprintf("Missing %s data", n[i]));
 			return(1)
 		}
 	}
@@ -33,7 +33,7 @@ M_global$checkNames <- function(n, table) {
 M_global$CLUSTERdata <- function(M_env, cluster.data, iter, nchains, burnin, initial_values) {
 
 	if (iter <= burnin || nchains < 1 || iter < 0 || burnin < 0) {
-		print("Invalid simulation setup parametetrs");
+		message("Invalid simulation setup parametetrs");
 		return(NULL)
 	}
 
@@ -46,19 +46,19 @@ M_global$CLUSTERdata <- function(M_env, cluster.data, iter, nchains, burnin, ini
 
 	# Perform some validation checks
 	if (is.null(cluster.data)) {
-		print("NULL cluster data")
+		message("NULL cluster data")
 		return(NULL)
 	}
 
 	if ((is.null(nrow(cluster.data))) || (nrow(cluster.data) == 0)) {
-		print("Missing cluster data set");
+		message("Missing cluster data set");
 		return(NULL)
 	}
 
 	# Check the correct columns are defined
 	cols = c("Outcome.Grp", "Outcome", "Count", "Trt.Grp", "Cluster", "Exposure")
 	if (M_global$checkCols(cols, cluster.data)) {
-		print("Missing columns");
+		message("Missing columns");
 		return(NULL)
 	}
 
@@ -84,15 +84,15 @@ M_global$CLUSTERdata <- function(M_env, cluster.data, iter, nchains, burnin, ini
 	# The data is ordered so a straight comparison is possible
 	for (i in 1:length(comparator.groups)) {
 		if(!identical(cntrl.data$Outcome.Grp, treat.data[[i]]$Outcome.Grp)) {
-			print("Mismatced outcome group data");
+			message("Mismatced outcome group data");
 			return(NULL)
 		}
 		if(!identical(cntrl.data$Outcome, treat.data[[i]]$Outcome)) {
-			print("Mismatced outcome data");
+			message("Mismatced outcome data");
 			return(NULL)
 		}
 		if(!identical(cntrl.data$Cluster, treat.data[[i]]$Cluster)) {
-			print("Mismatced cluster data");
+			message("Mismatced cluster data");
 			return(NULL)
 		}
 	}
@@ -141,7 +141,7 @@ M_global$CLUSTERdata <- function(M_env, cluster.data, iter, nchains, burnin, ini
 			# in an cluster - Let's add a check. Probably need to add it to bhpm.BB
 			# etc. as well.
 			if (length(unique(c$Outcome)) != length(c$Outcome)) {
-				print("Multipe outcomes in outcome group");
+				message("Multipe outcomes in outcome group");
 				return(NULL)
 			}
 
@@ -194,7 +194,7 @@ M_global$checkBS <- function(M_env, cntrl.data) {
 			b = c$Outcome.Grp
 
 			if (!identical(b1, b)) {
-				print("Clusters contain different outcome groups");
+				message("Clusters contain different outcome groups");
 				return(1)
 			}
 		}
@@ -804,7 +804,7 @@ M_global$CLUSTER_check_conv_name_1a_2 <- function(raw) {
 	}
 
 	if (M_global$checkNames(n, raw)) {
-		print("Missing names");
+		message("Missing names");
 		return(1)
 	}
 	0

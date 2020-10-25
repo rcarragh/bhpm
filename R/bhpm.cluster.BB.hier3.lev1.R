@@ -6,7 +6,7 @@
 
 MdBB_lev1 <- new.env()
 
-MdBB_lev1$Id <- "$Id: bhpm.cluster.BB.hier3.lev1.R,v 1.13 2019/06/03 11:08:49 clb13102 Exp clb13102 $"
+MdBB_lev1$Id <- "$Id: bhpm.cluster.BB.hier3.lev1.R,v 1.14 2020/03/31 12:42:23 clb13102 Exp clb13102 $"
 
 bhpm.cluster.BB.dep.lev1 <- function(cluster.data, sim_type = "SLICE", burnin = 10000, iter = 60000, nchains = 5,
 	theta_algorithm = "MH",
@@ -49,12 +49,12 @@ bhpm.cluster.BB.dep.lev1 <- function(cluster.data, sim_type = "SLICE", burnin = 
 	MdBB_lev1$sim_type <- sim_type
 
 	if (nrow(global.sim.params[global.sim.params$type == sim_type,]) == 0) {
-		print("Missing simulation parametetrs");
+		message("Missing simulation parametetrs");
 		return(NULL)
 	}
 
 	if (!all(global.sim.params$value > 0)) {
-		print("Invalid simulation parameter value");
+		message("Invalid simulation parameter value");
 		return(NULL)
 	}
 

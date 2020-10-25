@@ -42,9 +42,13 @@ R. Carragher
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-\dontrun{
 data(bhpm.cluster.data1)
-bhpm.gen.initial.values(bhpm.cluster.data1)
+initial.values <- bhpm.gen.initial.values(bhpm.cluster.data1)
+print(initial.values$mu.gamma.0)
+\donttest{
+data(bhpm.cluster.data1)
+initial.values <- bhpm.gen.initial.values(bhpm.cluster.data1)
+print(initial.values$mu.gamma.0)
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

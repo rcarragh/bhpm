@@ -3,9 +3,9 @@
 \alias{bhpm.multi.treatments}
 \title{Cluster analysis data.}
 \description{
-  This data set contains counts of outcomes and exposure times over all clusters of an observational study.
+  This data set contains counts of outcomes and exposure times for four treatments over all six clusters of an observational study.
 }
-\usage{bhpm.multi.treatments}
+\usage{data(bhpm.multi.treatments)}
 \format{A dataframe with columns \emph{Cluster}, \emph{Outcome.Grp}, \emph{Outcome}, \emph{Trt.Grp}, \emph{Count}, \emph{Exposure}.
 The dataframe contains 3720 observations.}
 %\source{World Almanac and Book of Facts, 1975, page 406.}

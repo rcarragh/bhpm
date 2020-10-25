@@ -24,7 +24,15 @@ R. Carragher
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-\dontrun{
+data(bhpm.cluster.data1)
+data <- subset(bhpm.cluster.data1, Cluster == '0.0-180.0')
+raw = bhpm.npm(data, burnin = 100, iter = 200)
+summ = bhpm.summary.stats(raw)
+bhpm.print.summary.stats(summ)
+
+\donttest{
+data(bhpm.cluster.data1)
+raw = bhpm.npm(bhpm.cluster.data1)
 summ = bhpm.summary.stats(raw)
 bhpm.print.summary.stats(summ)
 }

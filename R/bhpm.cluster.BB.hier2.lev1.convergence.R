@@ -7,7 +7,7 @@
 # If the MCMC simulation has been run for only one chain report the Geweke diagnostic (Z-score)
 #
 
-Id <- "$Id: bhpm.cluster.BB.hier2.lev1.convergence.R,v 1.11 2019/06/03 11:08:50 clb13102 Exp clb13102 $"
+Id <- "$Id: bhpm.cluster.BB.hier2.lev1.convergence.R,v 1.12 2020/03/31 12:42:23 clb13102 Exp clb13102 $"
 
 bhpm.cluster.BB.hier2.lev1.convergence.diag <- function(raw, debug_diagnostic = FALSE)
 {
@@ -25,12 +25,12 @@ bhpm.cluster.BB.hier2.lev1.convergence.diag <- function(raw, debug_diagnostic = 
 	nchains = raw$chains
 
 	if (pi_mon == 1 && !("pi" %in% names(raw))) {
-		print("Missing pi data")
+		message("Missing pi data")
 		return(NULL)
 	}
 
 	if (theta_mon == 1 && !("theta_acc" %in% names(raw))) {
-			print("Missing theta_acc data")
+			message("Missing theta_acc data")
 			return(NULL)
 	}
 
@@ -107,7 +107,7 @@ bhpm.cluster.BB.hier2.lev1.convergence.diag <- function(raw, debug_diagnostic = 
 
 bhpm.cluster.BB.hier2.lev1.print.convergence.summary <- function(conv) {
 	if (is.null(conv)) {
-		print("NULL conv data")
+		message("NULL conv data")
 		return(NULL)
 	}
 
@@ -123,46 +123,46 @@ bhpm.cluster.BB.hier2.lev1.print.convergence.summary <- function(conv) {
 
 	model = attr(conv, "model")
 	if (is.null(model)) {
-		print("Convergence model attribute missing")
+		message("Convergence model attribute missing")
 		return(NULL)
 	}
 
 	if (gamma_mon == 1 && !("gamma.conv.diag" %in% names(conv))) {
-		print("Missing gamma.conv.diag data")
+		message("Missing gamma.conv.diag data")
 		return(NULL)
 	}
 	if (theta_mon == 1 && !("theta.conv.diag" %in% names(conv))) {
-		print("Missing theta.conv.diag data")
+		message("Missing theta.conv.diag data")
 		return(NULL)
 	}
 	if (mu.gamma_mon == 1 && !("mu.gamma.conv.diag" %in% names(conv))) {
-		print("Missing mu.gamma.conv.diag data")
+		message("Missing mu.gamma.conv.diag data")
 		return(NULL)
 	}
 	if (mu.theta_mon == 1 && !("mu.theta.conv.diag" %in% names(conv))) {
-		print("Missing mu.theta.conv.diag data")
+		message("Missing mu.theta.conv.diag data")
 		return(NULL)
 	}
 	if (sigma2.gamma_mon == 1 && !("sigma2.gamma.conv.diag" %in% names(conv))) {
-		print("Missing sigma2.gamma.conv.diag data")
+		message("Missing sigma2.gamma.conv.diag data")
 		return(NULL)
 	}
 
     if (sigma2.theta_mon == 1 && !("sigma2.theta.conv.diag" %in% names(conv))) {
-		print("Missing sigma2.theta.conv.diag data")
+		message("Missing sigma2.theta.conv.diag data")
 		return(NULL)
 	}
     if (gamma_mon == 1 && !("gamma_acc" %in% names(conv))) {
-		print("Missing gamma_acc data")
+		message("Missing gamma_acc data")
 		return(NULL)
 	}
     if (theta_mon == 1 && !("theta_acc" %in% names(conv))) {
-		print("Missing theta_acc data")
+		message("Missing theta_acc data")
 		return(NULL)
 	}
 
 	if (pi_mon == 1 && !("pi.conv.diag" %in% names(conv))) {
-		print("Missing pi.conv.diag data")
+		message("Missing pi.conv.diag data")
 		return(NULL)
 	}
 

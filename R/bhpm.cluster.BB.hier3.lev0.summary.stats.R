@@ -3,7 +3,7 @@
 # R. Carragher
 # Date: 29/06/2018
 
-Id <- "$Id: bhpm.cluster.BB.hier3.lev0.summary.stats.R,v 1.11 2019/06/02 14:12:12 clb13102 Exp clb13102 $"
+Id <- "$Id: bhpm.cluster.BB.hier3.lev0.summary.stats.R,v 1.12 2020/03/31 12:42:23 clb13102 Exp clb13102 $"
 
 bhpm.cluster.BB.indep.summary.stats <- function(raw, prob = 0.95)
 {
@@ -31,17 +31,17 @@ bhpm.cluster.BB.indep.summary.stats <- function(raw, prob = 0.95)
 	theta.trt.grps <- raw$Trt.Grps[ raw$Trt.Grps$param == "theta", ]$Trt.Grp
 
 	if (pi_mon == 1 && !("pi" %in% names(raw))) {
-		print("Missing pi data");
+		message("Missing pi data");
 		return(NULL)
 	}
 
 	if (alpha_pi_mon == 1 && !("alpha.pi" %in% names(raw))) {
-		print("Missing alpha.pi data");
+		message("Missing alpha.pi data");
 		return(NULL)
 	}
 
 	if (beta_pi_mon == 1 && !("beta.pi" %in% names(raw))) {
-		print("Missing pbeta.i data");
+		message("Missing beta.pi data");
 		return(NULL)
 	}
 
@@ -132,63 +132,63 @@ bhpm.cluster.BB.indep.print.summary.stats <- function(summ)
 
 	model = attr(summ, "model")
 	if (is.null(model)) {
-		print("Missing model attribute");
+		message("Missing model attribute");
 		return(NULL)
 	}
 
 	if (theta_mon == 1 && !("theta.summary" %in% names(summ))) {
-		print("Missing theta.summary data");
+		message("Missing theta.summary data");
 		return(NULL)
 	}
 	if (gamma_mon == 1 && !("gamma.summary" %in% names(summ))) {
-		print("Missing gamma.summary data");
+		message("Missing gamma.summary data");
 		return(NULL)
 	}
 	if (mu.gamma_mon == 1 && !("mu.gamma.summary" %in% names(summ))) {
-		print("Missing mu.gamma.summary data");
+		message("Missing mu.gamma.summary data");
 		return(NULL)
 	}
 	if (mu.theta_mon == 1 && !("mu.theta.summary" %in% names(summ))) {
-		print("Missing mu.theta.summary data");
+		message("Missing mu.theta.summary data");
 		return(NULL)
 	}
 	if (sigma2.gamma_mon == 1 && !("sigma2.gamma.summary" %in% names(summ))) {
-		print("Missing sigma2.gamma.summary data");
+		message("Missing sigma2.gamma.summary data");
 		return(NULL)
 	}
 	if (sigma2.theta_mon == 1 && !("sigma2.theta.summary" %in% names(summ))) {
-		print("Missing sigma2.theta.summary data");
+		message("Missing sigma2.theta.summary data");
 		return(NULL)
 	}
 	if (mu.gamma.0_mon == 1 && !("mu.gamma.0.summary" %in% names(summ))) {
-		print("Missing mu.gamma.0.summary data");
+		message("Missing mu.gamma.0.summary data");
 		return(NULL)
 	}
 	if (mu.theta.0_mon == 1 && !("mu.theta.0.summary" %in% names(summ))) {
-		print("Missing mu.theta.0.summary data");
+		message("Missing mu.theta.0.summary data");
 		return(NULL)
 	}
 	if (tau2.theta.0_mon == 1 && !("tau2.theta.0.summary" %in% names(summ))) {
-		print("Missing tau2.theta.0.summary data");
+		message("Missing tau2.theta.0.summary data");
 		return(NULL)
 	}
 	if (tau2.gamma.0_mon == 1 && !("tau2.gamma.0.summary" %in% names(summ))) {
-		print("Missing tau2.gamma.0.summary data");
+		message("Missing tau2.gamma.0.summary data");
 		return(NULL)
 	}
 
 	if (pi_mon == 1 && !("pi.summary" %in% names(summ))) {
-		print("Missing pi.summary data");
+		message("Missing pi.summary data");
 		return(NULL)
 	}
 
 	if (alpha_pi_mon == 1 && !("alpha.pi.summary" %in% names(summ))) {
-		print("Missing alpha.pi.summary data");
+		message("Missing alpha.pi.summary data");
 		return(NULL)
 	}
 
 	if (beta_pi_mon == 1 && !("beta.pi.summary" %in% names(summ))) {
-		print("Missing beta.pi.summary data");
+		message("Missing beta.pi.summary data");
 		return(NULL)
 	}
 

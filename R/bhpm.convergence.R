@@ -7,18 +7,18 @@
 # If the MCMC simulation has been run for only one chain report the Geweke diagnostic (Z-score)
 #
 
-Id <- "$Id: bhpm.convergence.R,v 1.5 2019/04/28 13:51:46 clb13102 Exp clb13102 $"
+Id <- "$Id: bhpm.convergence.R,v 1.6 2020/03/31 12:42:23 clb13102 Exp clb13102 $"
 
 bhpm.convergence.diag <- function(raw, debug_diagnostic = FALSE)
 {
 	if (is.null(raw)) {
-		print("NULL raw data")
+		message("NULL raw data")
 		return(NULL)
 	}
 
 	model = attr(raw, "model")
 	if (is.null(model)) {
-		print("Simulation model attribute missing")
+		message("Simulation model attribute missing")
 		return(NULL)
 	}
 
@@ -55,13 +55,13 @@ bhpm.convergence.diag <- function(raw, debug_diagnostic = FALSE)
 bhpm.print.convergence.summary <- function(conv) {
 
 	if (is.null(conv)) {
-		print("NULL conv data")
+		message("NULL conv data")
 		return(NULL)
 	}
 
 	model = attr(conv, "model")
 	if (is.null(model)) {
-		print("Convergence model attribute missing")
+		message("Convergence model attribute missing")
 		return(NULL)
 	}
 

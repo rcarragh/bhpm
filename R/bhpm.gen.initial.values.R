@@ -24,7 +24,7 @@ bhpm.cluster.gen.initial.values = function(cluster.data, nchains, model, hier, l
 	# Check the correct columns are defined
 	cols = c("Outcome.Grp", "Outcome", "Count", "Trt.Grp", "Cluster", "Exposure")
 	if (M_global$checkCols(cols, cluster.data)) {
-		print("Missing columns");
+		message("Missing columns");
 		return(NULL)
 	}
 
@@ -43,15 +43,15 @@ bhpm.cluster.gen.initial.values = function(cluster.data, nchains, model, hier, l
     # The data is ordered so a straight comparison is possible
 	for (i in 1:length(comparator.groups)) {
 		if(!identical(cntrl.data$Outcome.Grp, treat.data[[i]]$Outcome.Grp)) {
-			print("Mismatced outcome group data");
+			message("Mismatced outcome group data");
 			return(NULL)
 		}
 		if(!identical(cntrl.data$Outcome, treat.data[[i]]$Outcome)) {
-			print("Mismatced outcome data");
+			message("Mismatced outcome data");
 			return(NULL)
 		}
 		if(!identical(cntrl.data$Cluster, treat.data[[i]]$Cluster)) {
-			print("Mismatced cluster data");
+			message("Mismatced cluster data");
 			return(NULL)
 		}
 	}

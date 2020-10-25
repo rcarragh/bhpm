@@ -3,18 +3,18 @@
 # R. Carragher
 # Date: 29/06/2018
 
-Id <- "$Id: bhpm.summary.stats.R,v 1.6 2019/04/28 13:51:46 clb13102 Exp clb13102 $"
+Id <- "$Id: bhpm.summary.stats.R,v 1.7 2020/03/31 12:42:23 clb13102 Exp clb13102 $"
 
 bhpm.summary.stats <- function(raw, prob = 0.95)
 {
 	if (is.null(raw)) {
-		print("NULL raw data");
+		message("NULL raw data");
 		return(NULL)
 	}
 
 	model = attr(raw, "model")
 	if (is.null(model)) {
-		print("Model attribute missing");
+		message("Model attribute missing");
 		return(NULL)
 	}
 
@@ -47,13 +47,13 @@ bhpm.summary.stats <- function(raw, prob = 0.95)
 bhpm.print.summary.stats <- function(summ)
 {
 	if (is.null(summ)) {
-		print("NULL summary data");
+		message("NULL summary data");
 		return(NULL)
 	}
 
 	model = attr(summ, "model")
 	if (is.null(model)) {
-		print("Missing model attribute");
+		message("Missing model attribute");
 		return(NULL)
 	}
 

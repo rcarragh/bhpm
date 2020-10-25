@@ -33,9 +33,13 @@ R. Carragher
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-\dontrun{
 data(bhpm.cluster.data1)
-bhpm.sim.control.params(bhpm.cluster.data1)
+s.c.p <- bhpm.sim.control.params(bhpm.cluster.data1)
+head(s.c.p)
+\donttest{
+data(bhpm.cluster.data1)
+s.c.p <- bhpm.sim.control.params(bhpm.cluster.data1)
+head(s.c.p)
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

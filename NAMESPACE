@@ -8,7 +8,7 @@ import(graphics)
 useDynLib(bhpm, .registration = TRUE)
 
 # bhpm.BB.utils
-export(bhpm.plot.samples)
+#export(bhpm.plot.samples)
 export(bhpm.convergence.diag)
 export(bhpm.print.convergence.summary)
 export(bhpm.ptheta)

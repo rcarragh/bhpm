@@ -33,8 +33,11 @@ R. Carragher
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \examples{
-\dontrun{
-bhpm.global.sim.param.defaults("BB", 3)
+g.s.p <- bhpm.global.sim.param.defaults("BB", 3)
+print(g.s.p)
+\donttest{
+g.s.p <- bhpm.global.sim.param.defaults("BB", 3)
+print(g.s.p)
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
