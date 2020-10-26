@@ -1,85 +1,55 @@
-cd error_control\
-CALL cleanup.bat
-cd ..
-
-cd c212.1a\changed_global_params
+cd bhpm.npm\changed_parameters
 CALL cleanup.bat
 cd ..\..
 
-cd c212.1a\changed_parameters
+cd bhpm.npm\default_parameters\
 CALL cleanup.bat
 cd ..\..
 
-cd c212.1a\default_parameters\
+cd bhpm.npm\initial_values
 CALL cleanup.bat
 cd ..\..
 
-cd c212.1a\initial_values
+cd bhpm.npm\single_chain\changed_parameters
 CALL cleanup.bat
 cd ..\..
 
-cd c212.1a\single_chain\
+cd bhpm.npm\single_chain\default_parameters\
 CALL cleanup.bat
 cd ..\..
 
-cd .\c212.BB\changed_global_sim_params\
+cd bhpm.npm\single_chain\initial_values
 CALL cleanup.bat
 cd ..\..
 
-cd .\c212.BB\changed_individual_sim_params\
+cd .\bhpm.pm\changed_pm_weights\
 CALL cleanup.bat
 cd ..\..
 
-cd .\c212.BB\changed_pm_weights\
+cd .\bhpm.pm\changed_sim_params\
 CALL cleanup.bat
 cd ..\..
 
-cd .\c212.BB\default_parameters\
+cd .\bhpm.pm\default_parameters\
 CALL cleanup.bat
 cd ..\..
 
-cd .\c212.BB\initial_values\
+cd .\bhpm.pm\initial_values\
 CALL cleanup.bat
 cd ..\..
 
-cd .\c212.BB\single_chain\
+cd .\bhpm.pm\single_chain\changed_pm_weights\
 CALL cleanup.bat
 cd ..\..
 
-
-cd .\c212.1a.interim\changed_parameters\
+cd .\bhpm.pm\single_chain\changed_sim_params\
 CALL cleanup.bat
 cd ..\..
 
-cd .\c212.1a.interim\default_parameters\
+cd .\bhpm.pm\single_chain\default_parameters\
 CALL cleanup.bat
 cd ..\..
 
-cd .\c212.1a.interim\initial_values\
-CALL cleanup.bat
-cd ..\..
-
-cd .\c212.1a.interim\single_chain\
-CALL cleanup.bat
-cd ..\..
-
-
-cd .\c212.BB.interim\changed_pm_weights\
-CALL cleanup.bat
-cd ..\..
-
-cd .\c212.BB.interim\changed_sim_params\
-CALL cleanup.bat
-cd ..\..
-
-cd .\c212.BB.interim\default_parameters\
-CALL cleanup.bat
-cd ..\..
-
-cd .\c212.BB.interim\initial_values\
-CALL cleanup.bat
-cd ..\..
-
-cd .\c212.BB.interim\single_chain\
+cd .\bhpm.pm\single_chain\initial_values\
 CALL cleanup.bat
 cd ..\..

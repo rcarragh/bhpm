@@ -11,6 +11,3 @@ if (rc != 0) { stop("Error");  }
 
 rc = Rdiff("baseline/ptheta95.dat", "test/ptheta95.dat")
 if (rc != 0) { stop("Error");  }
-
-rc = Rdiff("baseline/RAISED_AES", "test/RAISED_AES")
-if (rc != 0) { stop("Error");  }

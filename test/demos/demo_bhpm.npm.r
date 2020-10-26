@@ -18,7 +18,7 @@ conv <- bhpm.convergence.diag(mod.npm)
 bhpm.print.convergence.summary(conv)
 
 print(max(conv$theta.conv.diag$stat))
-# [1]  1.001697
+# [1] 1.000907
 
 # 3. If required calculate summary statistics (mean/median/hpi)
 summ <- bhpm.summary.stats(mod.npm)
@@ -27,12 +27,12 @@ bhpm.print.summary.stats(summ)
 # These may be accessed directly for model parameters:
 print(head(summ$theta))
 print(summ$theta[1,]$mean)
-# [1] -0.2348521
+# [1]  -0.08478039
 hpi <- c(summ$theta[1,]$hpi_lower, summ$theta[1,]$hpi_upper)
 print(hpi)
-# [1] -0.6828268  0.1924472
+# [1] -0.4764439  0.3033665
 
-# 4. Assuming the model have converged assess which AEs may be associated with treatment.
+# 4. Assuming the model has converged assess which AEs may be associated with treatment.
 # The model paramter theta is used for this purpose.
 theta.post.prob <- bhpm.ptheta(mod.npm)
 
@@ -40,14 +40,13 @@ theta.post.prob <- bhpm.ptheta(mod.npm)
 
 print(theta.post.prob[ theta.post.prob$ptheta.pos > 0.95 | theta.post.prob$ptheta.neg > 0.95,])
 
-#   Trt.Grp  Cluster Outcome.Grp  Outcome     ptheta ptheta.pos ptheta.zero   ptheta.neg
-# 3        2 Cluster1      Group2 Outcome3 0.99973333 0.99973333           0 2.666667e-04
-# 4        2 Cluster1      Group2 Outcome4 0.99995000 0.99995000           0 5.000000e-05
-# 5        2 Cluster1      Group2 Outcome5 0.04705000 0.04705000           0 9.529500e-01
-# 12       2 Cluster2      Group2 Outcome3 0.99993333 0.99993333           0 6.666667e-05
-# 21       2 Cluster3      Group2 Outcome3 1.00000000 1.00000000           0 0.000000e+00
-# 35       3 Cluster1      Group3 Outcome8 0.95175000 0.95175000           0 4.825000e-02
-# 46       3 Cluster3      Group1 Outcome1 0.01590000 0.01590000           0 9.841000e-01
-# 57       4 Cluster1      Group2 Outcome3 0.02540000 0.02540000           0 9.746000e-01
-# 64       4 Cluster2      Group1 Outcome1 0.04168333 0.04168333           0 9.583167e-01
-
+#    Trt.Grp Cluster Outcome.Grp         Outcome     ptheta ptheta.pos ptheta.zero   ptheta.neg
+# 5        2  M/0-64     G00-G99 G00-99_Outcome1 0.99966667 0.99966667           0 0.0003333333
+# 6        2  M/0-64     G00-G99 G00-99_Outcome2 1.00000000 1.00000000           0 0.0000000000
+# 7        2  M/0-64     G00-G99 G00-99_Outcome3 0.04766667 0.04766667           0 0.9523333333
+# 14       2 M/65-84     G00-G99 G00-99_Outcome1 0.99986667 0.99986667           0 0.0001333333
+# 23       2   M/85+     G00-G99 G00-99_Outcome1 1.00000000 1.00000000           0 0.0000000000
+# 30       3  M/0-64       Bleed  Bleed_Outcome3 0.95205000 0.95205000           0 0.0479500000
+# 53       3   M/85+     I00-I99 I00-99_Outcome1 0.01690000 0.01690000           0 0.9831000000
+# 59       4  M/0-64     G00-G99 G00-99_Outcome1 0.02851667 0.02851667           0 0.9714833333
+# 71       4 M/65-84     I00-I99 I00-99_Outcome1 0.04143333 0.04143333           0 0.9585666667
