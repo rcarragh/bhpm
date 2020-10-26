@@ -15,15 +15,15 @@ cd..\..
 
 cd bhpm.npm\single_chain\changed_parameters
 CALL check_test.bat
-cd..\..
+cd..\..\..
 
 cd bhpm.npm\single_chain\default_parameters
 CALL check_test.bat
-cd..\..
+cd..\..\..
 
 cd bhpm.npm\single_chain\initial_values\
 CALL check_test.bat
-cd..\..
+cd..\..\..
 
 echo "#####################################"
 echo "Checking bhpm.pm...."
@@ -46,16 +46,16 @@ cd..\..
 
 cd bhpm.pm\single_chain\changed_pm_weights\
 CALL check_test.bat
-cd..\..
+cd..\..\..
 
 cd bhpm.pm\single_chain\changed_sim_params\
 CALL check_test.bat
-cd..\..
+cd..\..\..
 
 cd bhpm.pm\single_chain\default_parameters\
 CALL check_test.bat
-cd..\..
+cd..\..\..
 
 cd bhpm.pm\single_chain\initial_values\
 CALL check_test.bat
-cd..\..
+cd..\..\..

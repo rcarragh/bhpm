@@ -1,5 +1,0 @@
-"Trt.Grp" "Cluster" "Outcome.Grp" "Outcome" "ptheta" "ptheta.pos" "ptheta.zero" "ptheta.neg"
-"5" 2 "M/0-64" "G00-G99" "G00-99_Outcome1" 0.999225 0.999225 0.00075 2.5e-05
-"6" 2 "M/0-64" "G00-G99" "G00-99_Outcome2" 0.9986 0.9986 0.001075 0.000325
-"14" 2 "M/65-84" "G00-G99" "G00-99_Outcome1" 1 1 0 0
-"23" 2 "M/85+" "G00-G99" "G00-99_Outcome1" 1 1 0 0
