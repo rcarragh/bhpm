@@ -1,1 +1,1 @@
-script -e "source(\"check_test.r\")"
+Rscript -e "source(\"check_test.r\")"
