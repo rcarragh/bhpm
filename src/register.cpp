@@ -9,13 +9,14 @@
 #include <R_ext/Visibility.h>
 
 #include "register.h"
+#include "bhpm_Rdefines.h"
 #include "bhpm_exec.h"
 
 //
 // Register native methods with R (entry-points into compiled code)
 //
 
-static const char *rcsId = "$Id: register.cpp,v 1.7 2019/04/28 13:51:58 clb13102 Exp clb13102 $";
+//static const char *rcsId = "$Id: register.cpp,v 1.7 2019/04/28 13:51:58 clb13102 Exp clb13102 $";
 
 // .C methods
 static R_CMethodDef cMethods[] = {

@@ -9,12 +9,13 @@
 #include <Rdefines.h>
 #include <Rinternals.h>
 
+#include "bhpm_Rdefines.h"
 #include "bhpm1a_poisson_mc_hier2_lev0.h"
 #include "bhpm1a_poisson_mc_hier3_lev0.h"
 
 using namespace std;
 
-static const char *rcsId = "$Id: bhpm1a_poisson_mc_hier3_lev0.cpp,v 1.7 2019/05/14 09:29:48 clb13102 Exp clb13102 $";
+//static const char *rcsId = "$Id: bhpm1a_poisson_mc_hier3_lev0.cpp,v 1.7 2019/05/14 09:29:48 clb13102 Exp clb13102 $";
 
 const char* bhpm1a_poisson_mc_hier3_lev0::sMonitor_mu_theta_0 = "mu.theta.0";
 const char* bhpm1a_poisson_mc_hier3_lev0::sMonitor_mu_gamma_0 = "mu.gamma.0";
@@ -407,9 +408,9 @@ void bhpm1a_poisson_mc_hier3_lev0::initMonitor(SEXP sMonitor)
     SEXP sVariables = R_NilValue;
     SEXP sValues = R_NilValue;
 
-    if (len > 0 && isNewList(sMonitor)) {
+    if (len > 0 && Rf_isNewList(sMonitor)) {
 
-        SEXP names = getAttrib(sMonitor, R_NamesSymbol);
+        SEXP names = Rf_getAttrib(sMonitor, R_NamesSymbol);
 
         int i = 0;
 
@@ -889,7 +890,7 @@ SEXP bhpm1a_poisson_mc_hier3_lev0::getL3Samples(double*** &data)
 	SEXP samples = R_NilValue;
 	SEXP dim = R_NilValue;
 
-	PROTECT(samples = allocVector(REALSXP, gChains * gNumClusters * (gIter - gBurnin)));
+	PROTECT(samples = Rf_allocVector(REALSXP, gChains * gNumClusters * (gIter - gBurnin)));
 
 	int i = 0;
 	int c = 0;
@@ -908,13 +909,13 @@ SEXP bhpm1a_poisson_mc_hier3_lev0::getL3Samples(double*** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 3));
+	PROTECT(dim = Rf_allocVector(INTSXP, 3));
 
 	INTEGER(dim)[0] = (gIter - gBurnin);
 	INTEGER(dim)[1] = gNumClusters;
 	INTEGER(dim)[2] = gChains;
 
-	setAttrib(samples, R_DimSymbol, dim);
+	Rf_setAttrib(samples, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 
@@ -926,7 +927,7 @@ SEXP bhpm1a_poisson_mc_hier3_lev0::getL3Samples(double**** &data)
 	SEXP samples = R_NilValue;
 	SEXP dim = R_NilValue;
 
-	PROTECT(samples = allocVector(REALSXP, gChains * gNumComparators * gNumClusters * (gIter - gBurnin)));
+	PROTECT(samples = Rf_allocVector(REALSXP, gChains * gNumComparators * gNumClusters * (gIter - gBurnin)));
 
 	int i = 0;
 	int c = 0;
@@ -950,14 +951,14 @@ SEXP bhpm1a_poisson_mc_hier3_lev0::getL3Samples(double**** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 4));
+	PROTECT(dim = Rf_allocVector(INTSXP, 4));
 
 	INTEGER(dim)[0] = (gIter - gBurnin);
 	INTEGER(dim)[1] = gNumClusters;
 	INTEGER(dim)[2] = gNumComparators;
 	INTEGER(dim)[3] = gChains;
 
-	setAttrib(samples, R_DimSymbol, dim);
+	Rf_setAttrib(samples, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 

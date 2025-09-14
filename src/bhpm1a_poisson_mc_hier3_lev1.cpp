@@ -9,7 +9,7 @@
 #include <Rdefines.h>
 #include <Rinternals.h>
 
-
+#include "bhpm_Rdefines.h"
 #include "bhpm1a_poisson_mc_hier2_lev0.h"
 #include "bhpm1a_poisson_mc_hier3_lev0.h"
 #include "bhpm1a_poisson_mc_hier3_lev2.h"
@@ -17,7 +17,7 @@
 
 using namespace std;
 
-static const char *rcsId = "$Id: bhpm1a_poisson_mc_hier3_lev1.cpp,v 1.9 2019/05/14 09:29:48 clb13102 Exp clb13102 $";
+//static const char *rcsId = "$Id: bhpm1a_poisson_mc_hier3_lev1.cpp,v 1.9 2019/05/14 09:29:48 clb13102 Exp clb13102 $";
 
 //
 // The way the code is set up means we can't allow the body-systems to change from cluster to
@@ -1105,7 +1105,7 @@ SEXP bhpm1a_poisson_mc_hier3_lev1::getL2Samples(double*** &data)
 	SEXP samples = R_NilValue;
 	SEXP dim = R_NilValue;
 
-	PROTECT(samples = allocVector(REALSXP, gChains * gMaxBs * (gIter - gBurnin)));
+	PROTECT(samples = Rf_allocVector(REALSXP, gChains * gMaxBs * (gIter - gBurnin)));
 
 	int i = 0;
 	int c = 0;
@@ -1124,13 +1124,13 @@ SEXP bhpm1a_poisson_mc_hier3_lev1::getL2Samples(double*** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 3));
+	PROTECT(dim = Rf_allocVector(INTSXP, 3));
 
 	INTEGER(dim)[0] = (gIter - gBurnin);
 	INTEGER(dim)[1] = gMaxBs;
 	INTEGER(dim)[2] = gChains;
 
-	setAttrib(samples, R_DimSymbol, dim);
+	Rf_setAttrib(samples, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 
@@ -1142,7 +1142,7 @@ SEXP bhpm1a_poisson_mc_hier3_lev1::getL2Samples(double**** &data)
 	SEXP samples = R_NilValue;
 	SEXP dim = R_NilValue;
 
-	PROTECT(samples = allocVector(REALSXP, gChains * gNumComparators * gMaxBs * (gIter - gBurnin)));
+	PROTECT(samples = Rf_allocVector(REALSXP, gChains * gNumComparators * gMaxBs * (gIter - gBurnin)));
 
 	int i = 0;
 	int c = 0;
@@ -1166,14 +1166,14 @@ SEXP bhpm1a_poisson_mc_hier3_lev1::getL2Samples(double**** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 4));
+	PROTECT(dim = Rf_allocVector(INTSXP, 4));
 
 	INTEGER(dim)[0] = (gIter - gBurnin);
 	INTEGER(dim)[1] = gMaxBs;
 	INTEGER(dim)[2] = gNumComparators;
 	INTEGER(dim)[3] = gChains;
 
-	setAttrib(samples, R_DimSymbol, dim);
+	Rf_setAttrib(samples, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 

@@ -9,11 +9,12 @@
 #include <Rdefines.h>
 #include <Rinternals.h>
 
+#include "bhpm_Rdefines.h"
 #include "bhpm1a_poisson_mc_hier2_lev0.h"
 
 using namespace std;
 
-static const char *rcsId = "$Id: bhpm1a_poisson_mc_hier2_lev0.cpp,v 1.12 2019/06/02 16:31:46 clb13102 Exp clb13102 $";
+//static const char *rcsId = "$Id: bhpm1a_poisson_mc_hier2_lev0.cpp,v 1.12 2019/06/02 16:31:46 clb13102 Exp clb13102 $";
 
 const char* bhpm1a_poisson_mc_hier2_lev0::sColType = "type";
 const char* bhpm1a_poisson_mc_hier2_lev0::sColVariable = "variable";
@@ -1023,7 +1024,7 @@ void bhpm1a_poisson_mc_hier2_lev0::initSimParams(SEXP sSim_Params)
 
 	int len = Rf_length(sSim_Params);
 
-	if (len && isNewList(sSim_Params)) {
+	if (len && Rf_isNewList(sSim_Params)) {
 
 		SEXP sVariables = R_NilValue;
 		SEXP sParams = R_NilValue;
@@ -1034,7 +1035,7 @@ void bhpm1a_poisson_mc_hier2_lev0::initSimParams(SEXP sSim_Params)
 		SEXP sC_index = R_NilValue;
 		SEXP sGroup = R_NilValue;
 
-		SEXP names = getAttrib(sSim_Params, R_NamesSymbol);
+		SEXP names = Rf_getAttrib(sSim_Params, R_NamesSymbol);
 
 		for (i = 0; i < len; i++) {
 			if (strcmp(sColValue, CHAR(STRING_ELT(names, i))) == 0) {
@@ -1112,8 +1113,8 @@ void bhpm1a_poisson_mc_hier2_lev0::initMonitor(SEXP sMonitor)
     SEXP sVariables = R_NilValue;
     SEXP sValues = R_NilValue;
 
-    if (len > 0 && isNewList(sMonitor)) {
-        SEXP names = getAttrib(sMonitor, R_NamesSymbol);
+    if (len > 0 && Rf_isNewList(sMonitor)) {
+        SEXP names = Rf_getAttrib(sMonitor, R_NamesSymbol);
 
         int i = 0;
 
@@ -1854,7 +1855,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Samples(double****** &data)
 	SEXP samples = R_NilValue;
 	SEXP dim = R_NilValue;
 
-	PROTECT(samples = allocVector(REALSXP, gChains * gNumComparators * gNumClusters * gMaxBs * gMaxAEs * (gIter - gBurnin)));
+	PROTECT(samples = Rf_allocVector(REALSXP, gChains * gNumComparators * gNumClusters * gMaxBs * gMaxAEs * (gIter - gBurnin)));
 
 	int i = 0;
 	int c = 0;
@@ -1895,7 +1896,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Samples(double****** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 6));
+	PROTECT(dim = Rf_allocVector(INTSXP, 6));
 
 	INTEGER(dim)[0] = (gIter - gBurnin);
 	INTEGER(dim)[1] = gMaxAEs;
@@ -1904,7 +1905,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Samples(double****** &data)
 	INTEGER(dim)[4] = gNumComparators;
 	INTEGER(dim)[5] = gChains;
 
-	setAttrib(samples, R_DimSymbol, dim);
+	Rf_setAttrib(samples, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 
@@ -1916,7 +1917,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Samples(double***** &data)
 	SEXP samples = R_NilValue;
 	SEXP dim = R_NilValue;
 
-	PROTECT(samples = allocVector(REALSXP, gChains * gNumClusters * gMaxBs * gMaxAEs * (gIter - gBurnin)));
+	PROTECT(samples = Rf_allocVector(REALSXP, gChains * gNumClusters * gMaxBs * gMaxAEs * (gIter - gBurnin)));
 
 	int i = 0;
 	int c = 0;
@@ -1952,7 +1953,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Samples(double***** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 5));
+	PROTECT(dim = Rf_allocVector(INTSXP, 5));
 
 	INTEGER(dim)[0] = (gIter - gBurnin);
 	INTEGER(dim)[1] = gMaxAEs;
@@ -1960,7 +1961,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Samples(double***** &data)
 	INTEGER(dim)[3] = gNumClusters;
 	INTEGER(dim)[4] = gChains;
 
-	setAttrib(samples, R_DimSymbol, dim);
+	Rf_setAttrib(samples, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 
@@ -1972,7 +1973,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL2Samples(double**** &data)
 	SEXP samples = R_NilValue;
 	SEXP dim = R_NilValue;
 
-	PROTECT(samples = allocVector(REALSXP, gChains * gNumClusters * gMaxBs * (gIter - gBurnin)));
+	PROTECT(samples = Rf_allocVector(REALSXP, gChains * gNumClusters * gMaxBs * (gIter - gBurnin)));
 
 	int i = 0;
 	int c = 0;
@@ -1998,14 +1999,14 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL2Samples(double**** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 4));
+	PROTECT(dim = Rf_allocVector(INTSXP, 4));
 
 	INTEGER(dim)[0] = (gIter - gBurnin);
 	INTEGER(dim)[1] = gMaxBs;
 	INTEGER(dim)[2] = gNumClusters;
 	INTEGER(dim)[3] = gChains;
 
-	setAttrib(samples, R_DimSymbol, dim);
+	Rf_setAttrib(samples, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 
@@ -2017,7 +2018,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL2Samples(double***** &data)
 	SEXP samples = R_NilValue;
 	SEXP dim = R_NilValue;
 
-	PROTECT(samples = allocVector(REALSXP, gChains * gNumComparators * gNumClusters * gMaxBs * (gIter - gBurnin)));
+	PROTECT(samples = Rf_allocVector(REALSXP, gChains * gNumComparators * gNumClusters * gMaxBs * (gIter - gBurnin)));
 
 	int i = 0;
 	int c = 0;
@@ -2048,7 +2049,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL2Samples(double***** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 5));
+	PROTECT(dim = Rf_allocVector(INTSXP, 5));
 
 	INTEGER(dim)[0] = (gIter - gBurnin);
 	INTEGER(dim)[1] = gMaxBs;
@@ -2056,7 +2057,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL2Samples(double***** &data)
 	INTEGER(dim)[3] = gNumComparators;
 	INTEGER(dim)[4] = gChains;
 
-	setAttrib(samples, R_DimSymbol, dim);
+	Rf_setAttrib(samples, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 
@@ -2124,7 +2125,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Accept(int***** &data)
 	SEXP acc = R_NilValue;
 	SEXP dim = R_NilValue;
 
-   PROTECT(acc = allocVector(INTSXP, gChains * gNumComparators * gNumClusters * gMaxBs * gMaxAEs));
+   PROTECT(acc = Rf_allocVector(INTSXP, gChains * gNumComparators * gNumClusters * gMaxBs * gMaxAEs));
 
 	int i = 0;
 	int c = 0;
@@ -2154,7 +2155,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Accept(int***** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 5));
+	PROTECT(dim = Rf_allocVector(INTSXP, 5));
 
 	INTEGER(dim)[0] = gMaxAEs;
 	INTEGER(dim)[1] = gMaxBs;
@@ -2162,7 +2163,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Accept(int***** &data)
 	INTEGER(dim)[3] = gNumComparators;
 	INTEGER(dim)[4] = gChains;
 
-	setAttrib(acc, R_DimSymbol, dim);
+	Rf_setAttrib(acc, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 
@@ -2174,7 +2175,7 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Accept(int**** &data)
 	SEXP acc = R_NilValue;
 	SEXP dim = R_NilValue;
 
-   PROTECT(acc = allocVector(INTSXP, gChains * gNumClusters * gMaxBs * gMaxAEs));
+   PROTECT(acc = Rf_allocVector(INTSXP, gChains * gNumClusters * gMaxBs * gMaxAEs));
 
 	int i = 0;
 	int c = 0;
@@ -2199,14 +2200,14 @@ SEXP bhpm1a_poisson_mc_hier2_lev0::getL1Accept(int**** &data)
 	delete [] data;
 	data = NULL;
 
-	PROTECT(dim = allocVector(INTSXP, 4));
+	PROTECT(dim = Rf_allocVector(INTSXP, 4));
 
 	INTEGER(dim)[0] = gMaxAEs;
 	INTEGER(dim)[1] = gMaxBs;
 	INTEGER(dim)[2] = gNumClusters;
 	INTEGER(dim)[3] = gChains;
 
-	setAttrib(acc, R_DimSymbol, dim);
+	Rf_setAttrib(acc, R_DimSymbol, dim);
 
 	UNPROTECT(2);
 

@@ -10,13 +10,13 @@
 #include <Rdefines.h>
 #include <Rinternals.h>
 
-
+#include "bhpm_Rdefines.h"
 #include "bhpm1a_poisson_mc_hier2_lev0.h"
 #include "bhpmBB_poisson_mc_hier2_lev0.h"
 
 using namespace std;
 
-static const char *rcsId = "$Id: bhpmBB_poisson_mc_hier2_lev0.cpp,v 1.10 2019/04/28 13:51:58 clb13102 Exp clb13102 $";
+//static const char *rcsId = "$Id: bhpmBB_poisson_mc_hier2_lev0.cpp,v 1.10 2019/04/28 13:51:58 clb13102 Exp clb13102 $";
 
 const char* bhpmBB_poisson_mc_hier2_lev0::sMonitor_pi = "pi";
 
@@ -131,9 +131,9 @@ void bhpmBB_poisson_mc_hier2_lev0::initGlobalSimParams(SEXP sSim_Type, SEXP sGlo
 		gSimType = eSim_Type_SLICE;
 	}
 
-    if (len > 0 && isNewList(sGlobal_Sim_Params)) {
+    if (len > 0 && Rf_isNewList(sGlobal_Sim_Params)) {
 
-        SEXP names = getAttrib(sGlobal_Sim_Params, R_NamesSymbol);
+        SEXP names = Rf_getAttrib(sGlobal_Sim_Params, R_NamesSymbol);
 
         int i = 0;
 
@@ -200,9 +200,9 @@ void bhpmBB_poisson_mc_hier2_lev0::initPMWeights(SEXP pm_weights)
 	SEXP sj = R_NilValue;
 	SEXP sGroup = R_NilValue;
 
-	if (len && isNewList(pm_weights)) {
+	if (len && Rf_isNewList(pm_weights)) {
 
-		SEXP names = getAttrib(pm_weights, R_NamesSymbol);
+		SEXP names = Rf_getAttrib(pm_weights, R_NamesSymbol);
 
 		for (i = 0; i < len; i++) {
 			if (strcmp(sColPMweight, CHAR(STRING_ELT(names, i))) == 0) {
@@ -291,7 +291,7 @@ void bhpmBB_poisson_mc_hier2_lev0::initSimParams(SEXP sSim_Params)
 
 	int len = Rf_length(sSim_Params);
 
-	if (len && isNewList(sSim_Params)) {
+	if (len && Rf_isNewList(sSim_Params)) {
 
 		SEXP sVariables = R_NilValue;
 		SEXP sParams = R_NilValue;
@@ -302,7 +302,7 @@ void bhpmBB_poisson_mc_hier2_lev0::initSimParams(SEXP sSim_Params)
 		SEXP sC_index = R_NilValue;
 		SEXP sGroup = R_NilValue;
 
-		SEXP names = getAttrib(sSim_Params, R_NamesSymbol);
+		SEXP names = Rf_getAttrib(sSim_Params, R_NamesSymbol);
 
 		for (i = 0; i < len; i++) {
 			if (strcmp(sColValue, CHAR(STRING_ELT(names, i))) == 0) {
@@ -573,9 +573,9 @@ void bhpmBB_poisson_mc_hier2_lev0::initMonitor(SEXP sMonitor)
     SEXP sVariables = R_NilValue;
     SEXP sValues = R_NilValue;
 
-    if (len > 0 && isNewList(sMonitor)) {
+    if (len > 0 && Rf_isNewList(sMonitor)) {
 
-        SEXP names = getAttrib(sMonitor, R_NamesSymbol);
+        SEXP names = Rf_getAttrib(sMonitor, R_NamesSymbol);
 
         int i = 0;
 

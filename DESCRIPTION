@@ -1,19 +1,19 @@
 Package: bhpm
 Type: Package
 Title: Bayesian Hierarchical Poisson Models for Multiple Grouped Outcomes with Clustering
-Version: 1.8
-Date: 2020-09-04
+Version: 1.8.1
+Date: 2025-09-12
 Authors@R:  person(given = "Raymond",
              family = "Carragher",
              role = c("aut", "cre"),
-             email = "raymond.carragher@strath.ac.uk",
+             email = "rcarragh@gmail.com",
              comment = c(ORCID = "0000-0002-0120-625X"))
 Author: Raymond Carragher [aut, cre] (<https://orcid.org/0000-0002-0120-625X>)
-Maintainer: Raymond Carragher <raymond.carragher@strath.ac.uk>
-Depends: coda
+Maintainer: Raymond Carragher <rcarragh@gmail.com>
+Depends: coda (>= 0.19)
 Encoding: UTF-8
 LazyData: true
 Description: Bayesian hierarchical methods for the detection of differences in rates of related outcomes for multiple treatments for clustered observations (Carragher et al. (2020) <doi:10.1002/sim.8563>). This software was developed for the Precision Drug Theraputics: Risk Prediction in Pharmacoepidemiology project as part of a Rutherford Fund Fellowship at Health Data Research (UK), Medical Research Council (UK) award reference MR/S003967/1 (<https://gtr.ukri.org/>). Principal Investigator: Raymond Carragher.
-License: GPL (>= 2)
+License: GPL-3
 URL: https://github.com/rcarragh/bhpm
 BugReports: https://github.com/rcarragh/bhpm/issues

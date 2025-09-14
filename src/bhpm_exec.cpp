@@ -9,6 +9,7 @@
 #include <Rdefines.h>
 #include <Rinternals.h>
 
+#include "bhpm_Rdefines.h"
 #include "bhpm_exec.h"
 #include "bhpm1a_poisson_mc_hier2_lev0.h"
 #include "bhpm1a_poisson_mc_hier2_lev1.h"
@@ -23,7 +24,7 @@
 
 using namespace std;
 
-static const char *rcsId = "$Id: bhpm_exec.cpp,v 1.7 2019/04/28 13:51:57 clb13102 Exp clb13102 $";
+//static const char *rcsId = "$Id: bhpm_exec.cpp,v 1.7 2019/04/28 13:51:57 clb13102 Exp clb13102 $";
 
 static bhpm1a_poisson_mc_hier2_lev0* model_cluster = NULL;
 
