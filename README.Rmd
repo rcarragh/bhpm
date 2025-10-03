@@ -42,8 +42,21 @@ devtools::install_github("rcarragh/bhpm")
 
 This is a basic example which shows how to fit the model:
 
+### Model fit
 ```{r example1}
 library(bhpm)
 data(demo.cluster.data)
-mod.fit <- bhpm.pm(demo.cluster.data, burnin = 100, iter = 200)
+mod.fit <- bhpm.pm(demo.cluster.data)#, burnin = 100, iter = 200)
+```
+
+### Model convergence
+```{r }
+mod.conv <- bhpm.convergence.diag(mod.fit)
+bhpm.print.convergence.summary(mod.conv)
+```
+
+### Model posterior probabilities
+```{r posterior}
+mod.ptheta <- bhpm.ptheta(mod.fit)
+print(mod.ptheta[mod.ptheta$ptheta.pos > .8 | mod.ptheta$ptheta.neg > 0.8, c("Trt.Grp","Cluster","Outcome","ptheta.pos","ptheta.neg")]) 
 ```
